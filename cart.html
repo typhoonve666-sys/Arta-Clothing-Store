@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نهایی‌سازی سفارش</title>
+    <style>
+
+
+
+        body {
+            font-family: 'IRANSans', tahoma, sans-serif;
+            background: #f3e5f5;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .checkout-container {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+            padding: 2rem;
+            max-width: 420px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #4a0072;
+        }
+        label {
+            display: block;
+            margin-bottom: .5rem;
+            font-weight: 700;
+            color: #4a148c;
+        }
+        input {
+            width: 100%;
+            padding: .75rem 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid #ce93d8;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color .3s;
+        }
+        input:focus {
+            border-color: #7b1fa2;
+            outline: none;
+        }
+        button[type="submit"] {
+            width: 100%;
+            background: #7b1fa2;
+            color: #fff;
+            padding: .85rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background .3s;
+        }
+        button[type="submit"]:hover {
+            background: #4a0072;
+        }
+
+        #total-amount {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #7b1fa2;
+        }
+        .status-box {
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+  <div class="checkout-container">
+    <h2>اطلاعات خود را وارد کنید</h2>
+    <form id="checkout-form">
+      <label for="name">نام و نام خانوادگی:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">شماره تلفن:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="location">آدرس (مکان تحویل):</label>
+      <input type="text" id="location" name="location" required>
+
+      <label for="phone2">شماره تلفن دوم (اختیاری):</label>
+      <input type="tel" id="phone2" name="phone2">
+
+      <button type="submit">ثبت سفارش</button>
+    </form>
+
+   
+
+    <div id="order-status" class="status-box" style="display:none;">در حال پیگیری سفارش شما...</div>
+    <div id="order-complete" class="status-box" style="display:none; color:#25D366;">سفارش شما ثبت شد!</div>
+  </div>
+  <script>
+    const form = document.getElementById("checkout-form");
+    
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+    
+      // اطلاعات کاربر
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const location = document.getElementById("location").value.trim();
+      const phone2 = document.getElementById("phone2").value.trim();
+    
+      // خواندن سبد خرید
+      const cart = JSON.parse(localStorage.getItem('artaCart')) || [];
+
+    
+      if (cart.length === 0) {
+        alert("سبد خرید شما خالی است!");
+        return;
+      }
+    
+      // محاسبه قیمت کل
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    
+      // ساخت سفارش کامل
+      const orderData = {
+        name,
+        phone,
+        phone2,
+        location,
+        products: cart, // شامل name، price، quantity
+        totalPrice,
+        status: "در حال پردازش"
+      };
+    
+      // ذخیره در localStorage
+      let orders = JSON.parse(localStorage.getItem('orders')) || [];
+      orders.push(orderData);
+      localStorage.setItem('orders', JSON.stringify(orders));
+    
+      // پاک کردن سبد خرید پس از ثبت
+      localStorage.removeItem('cart');
+    
+      // نمایش پیام موفقیت
+      document.getElementById("order-status").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("order-status").style.display = "none";
+        document.getElementById("order-complete").style.display = "block";
+      }, 1500);
+    });
+    </script>
+  </script>
+
+</body>
+</html>
+
+
+  ...
+  <style>
+    /* فقط پس‌زمینه همین صفحه */
+    body.send-product {
+      background-image: url('./bak.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+
+<body class="send-product">
+  <!-- فرم یا محتوا -->
+</body>
+</html>
+
+

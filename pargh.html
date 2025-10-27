@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <title>لباس سرای ارتا | فروشگاه آنلاین لباس</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- فونت ایران‌سنس -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/iransans@4.5.0/index.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- لینک به فایل CSS -->
+    
+   
+</head>
+
+
+
+
+<script>
+
+</script>
+
+<body>
+
+
+   
+    
+
+    
+    
+
+    <style>
+        /*==============================
+          VARIABLES & RESET
+        ==============================*/
+        :root {
+            --primary: #7b1fa2;
+            --primary-dark: #4a0072;
+            --accent: #ce93d8;
+            --bg: #f3e5f5;
+            --surface: #ffffff;
+            --text: #4a148c;
+            --radius: 16px;
+            --transition: all .3s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'IranSans', tahoma, sans-serif;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            border-radius: var(--radius);
+        }
+        button {
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* دیگر استایل‌های عمومی سایت ادامه پیدا می‌کند... */
+    </style>
+</head>
+    <meta charset="UTF-8">
+    <title>لباس سرای ارتا | فروشگاه آنلاین لباس</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- فونت ایران‌سنس -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/iransans@4.5.0/index.min.css">
+    <style>
+        /*==============================
+          VARIABLES & RESET
+        ==============================*/
+        :root {
+            --primary: #7b1fa2;
+            --primary-dark: #4a0072;
+            --accent: #ce93d8;
+            --bg: #f3e5f5;
+            --surface: #ffffff;
+            --text: #4a148c;
+            --radius: 16px;
+            --transition: all .3s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'IranSans', tahoma, sans-serif;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            border-radius: var(--radius);
+        }
+        button {
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /*==============================
+          HEADER
+        ==============================*/
+        header {
+            background: var(--surface);
+            box-shadow: 0 4px 12px rgba(0,0,0,.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background: #3d3d3d;      /* پس‌زمینه مشکی */
+            color: #fff;  
+            
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+        .logo svg {
+            width: 42px;
+            height: 42px;
+            fill: var(--primary);
+        }
+        .search-box {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 2rem;
+            position: relative;
+        }
+        .search-box input {
+            width: 100%;
+            padding: .7rem 3rem .7rem 1rem;
+            border: 2px solid var(--accent);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .search-box input:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        .search-box button {
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            color: #fff;
+            padding: .4rem 1.2rem;
+            border-radius: var(--radius);
+        }
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .user-actions button {
+            background: transparent;
+            color: var(--primary);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: .4rem;
+            padding: .4rem .8rem;
+            border-radius: var(--radius);
+            border: 2px solid transparent;
+        }
+        .user-actions button:hover {
+            border-color: var(--primary);
+        }
+        .cart-count {
+            background: var(--primary-dark);
+            color: #fff;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: .8rem;
+        }
+
+        /*==============================
+          MAIN
+        ==============================*/
+        main {
+            padding: 2rem;
+            max-width: 1300px;
+            margin: auto;
+        }
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .filters select {
+            padding: .5rem 1rem;
+            border: 2px solid var(--accent);
+            border-radius: var(--radius);
+            background: var(--surface);
+            color: var(--text);
+            font-size: 1rem;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background: var(--surface);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,.06);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(0,0,0,.1);
+        }
+        .product-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body h3 {
+            font-size: 1.1rem;
+            margin-bottom: .5rem;
+            color: var(--primary-dark);
+        }
+        .card-body .price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: .8rem;
+        }
+        .card-body .props {
+            font-size: .9rem;
+            color: #555;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+        .card-body button {
+            background: var(--primary);
+            color: #fff;
+            width: 100%;
+            padding: .7rem;
+            border-radius: var(--radius);
+            font-size: 1rem;
+        }
+        .card-body button:hover {
+            background: var(--primary-dark);
+        }
+
+        /*==============================
+          CART SIDEBAR
+        ==============================*/
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -380px;
+            width: 380px;
+            height: 100%;
+            background: var(--surface);
+            box-shadow: -4px 0 12px rgba(0,0,0,.1);
+            transition: right .4s ease;
+            z-index: 200;
+            display: flex;
+            flex-direction: column;
+        }
+        .cart-sidebar.active {
+            right: 0;
+        }
+        .cart-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem;
+            border-bottom: 1px solid var(--accent);
+        }
+        .cart-header h2 {
+            color: var(--primary-dark);
+        }
+        .cart-header button {
+            background: transparent;
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+        .cart-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--accent);
+        }
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: var(--radius);
+        }
+        .cart-item-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .cart-item-info h4 {
+            font-size: 1rem;
+            color: var(--primary-dark);
+        }
+        .cart-item-info .price {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .qty-controls {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+        .qty-controls button {
+            background: var(--accent);
+            color: var(--primary-dark);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+        .cart-footer {
+            padding: 1.2rem;
+            border-top: 1px solid var(--accent);
+        }
+        .cart-footer .total {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+        .cart-footer .checkout {
+            width: 100%;
+            background: var(--primary);
+            color: #fff;
+            padding: .8rem;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+        }
+        .cart-footer .checkout:hover {
+            background: var(--primary-dark);
+        }
+
+        /*==============================
+          AUTH MODAL
+        ==============================*/
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.5);
+            display: none;
+            place-items: center;
+            z-index: 300;
+        }
+        .modal.active {
+            display: grid;
+        }
+        .modal-content {
+            background: var(--surface);
+            width: 90%;
+            max-width: 420px;
+            border-radius: var(--radius);
+            padding: 2rem;
+            position: relative;
+            animation: fadeIn .4s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .modal-content h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+        .modal-content input {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: .7rem 1rem;
+            border: 2px solid var(--accent);
+            border-radius: var(--radius);
+            font-size: 1rem;
+        }
+        .modal-content input:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        .modal-content button[type="submit"] {
+            width: 100%;
+            background: var(--primary);
+            color: #fff;
+            padding: .7rem;
+            border-radius: var(--radius);
+            font-size: 1rem;
+        }
+        .modal-content .switch {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: .9rem;
+        }
+        .modal-content .switch span {
+            color: var(--primary);
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        /*==============================
+          RESPONSIVE
+        ==============================*/
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .search-box {
+                order: 3;
+                flex: 1 1 100%;
+                margin: 0;
+            }
+            .cart-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+        }
+        /*==============================  RESPONSIVE  ==============================*/
+@media (max-width: 768px) { ... }
+
+/* ===== زوم تصویر روی هاور ===== */
+.product-card img {
+    transition: transform .3s ease;
+}
+.product-card:hover img {
+    transform: scale(1.25);
+}
+
+    </style>
+    
+</head>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+<body>
+    
+
+    
+
+<header>
+    <div class="top-bar">
+        <a href="#" class="logo">
+            <img src="data:data:image/jpeg;base64,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"
+                 alt="لباس سرای ارتا"
+                 style="width:90px;height:auto;">
+            <span style="margin-right:.5rem;">لباس سرای ارتا</span>
+          </a>
+        </a>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجوی لباس مورد نظر...">
+            <button onclick="filterProducts()">جستجو</button>
+        </div>
+
+        <div class="user-actions">
+  <!-- دکمه جدید -->
+  <button id="themeToggle" title="روشن / تاریک">🌓</button>
+  
+  <!-- دکمه‌های قبلی -->
+  <button onclick="toggleAuth()">
+    <span>👤</span>
+    <span id="userLabel">ورود / ثبت‌نام</span>
+  </button>
+  <button onclick="toggleCart()">
+    <span>🛒</span>
+    <span>سبد خرید</span>
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+</div>
+</header>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>به <span class="brand">لباس سرای ارتا</span> خوش‌آمدید</h1>
+      <p>بزرگ‌ترین مجموعه لباس های ایرانی و خارجی با کیفیت برتر و قیمت شگفت‌انگیز</p>
+      <a href="#productsContainer" class="cta">مشاهده محصولات</a>
+    </div>
+  </section>
+
+  <!-- محصولات -->
+  <main>
+    <div class="filters"> ... </div>
+    <section class="products-grid" id="productsGrid"></section>
+    <section id="productsContainer" class="products-grid clearfix"></section>
+    <div style="clear:both;"></div>
+  </main>
+    
+
+    
+
+    <!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحه اصلی</title>
+  <link rel="stylesheet" href="style.css"> <!-- اتصال به فایل استایل -->
+</head>
+
+
+
+
+<body>
+
+    
+
+
+    
+ 
+    <script>
+(function () {
+  const products = JSON.parse(localStorage.getItem('products')) || [];
+  const grid = document.getElementById('productsGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '';
+  if (!products.length) {
+    grid.innerHTML = '<p style="text-align:center;width:100%;">هیچ محصولی از پنل اضافه نشده است.</p>';
+    return;
+  }
+
+  products.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+      <div style="
+        width:120px;
+        height:120px;
+        margin:0 auto 12px;
+        border-radius:50%;
+        overflow:hidden;
+        border:3px solid #fff;
+        box-shadow:0 2px 6px rgba(0,0,0,.12);
+      ">
+        <img src="${p.image}" alt="${p.name}"
+             style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <h3>${p.name}</h3>
+      <p>${p.price.toLocaleString('fa-IR')} تومان</p>
+      <p style="font-size:0.8rem;color:#555;margin:4px 0;">${p.description || ''}</p>
+      <button onclick="window.addToCart(${p.id})">
+                افزودن به سبد
+      </button>
+    `;
+    grid.appendChild(card);
+  });
+})();
+</script>
+
+</body>
+</html>
+
+
+
+<style>
+    
+
+    /* دکمه تعویض تم */
+#themeToggle {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+#themeToggle:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* حالت تاریک */
+body.dark {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: #f3e5f5;
+  --primary: #ce93d8;
+  --accent: #4a0072;
+  background: #121212;
+  color: #f3e5f5;
+}
+body.dark header {
+  background: #000 !important;
+}
+body.dark,
+body.dark * {
+  color: #fff !important;
+}
+    
+
+    
+
+    
+    /* -------------------------------------------------- */
+    /*  Hero گرافیکی – متن وسط تصویر
+    /* -------------------------------------------------- */
+    .hero {
+        
+        position: relative;
+        height: 70vh;
+        min-height: 420px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;   /* وسط افقی */
+        padding: 2rem 5vw;
+        border-radius: 0 0 40px 40px;
+    }
+    
+    .fabric-bg {
+        position: absolute;
+        inset: 0;
+        background:
+            repeating-linear-gradient(
+                45deg,
+                rgba(123, 31, 162, 0.15) 0px,
+                rgba(123, 31, 162, 0.15) 1px,
+                transparent 1px,
+                transparent 14px
+            ),
+            radial-gradient(
+                ellipse at center,
+                #f3e5f5 0%,
+                #e1bee7 50%,
+                #ce93d8 100%
+            );
+        z-index: 1;
+    }
+    
+    .hero-text {
+        position: relative;
+        z-index: 2;
+        text-align: center; /* وسط متن */
+        color: #4a0072;
+        max-width: 600px;
+    }
+    
+    .hero-text h1 {
+        font-size: clamp(1.8rem, 4vw, 3.2rem);
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+    .hero-text h1 .brand {
+        color: #7b1fa2;
+        text-shadow: 0 0 4px #fff, 0 0 8px #ce93d8;
+    }
+    .hero-text p {
+        font-size: clamp(1rem, 2.5vw, 1.3rem);
+        margin-bottom: 2rem;
+        line-height: 1.9;
+    }
+    
+    .cta {
+        display: inline-block;
+        background: #7b1fa2;
+        color: #fff;
+        padding: 0.9rem 2.2rem;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(123, 31, 162, 0.35);
+    }
+    .cta:hover {
+        background: #4a0072;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(123, 31, 162, 0.45);
+    }
+
+    
+
+    header {
+    background: #000 !important;   /* پس‌زمینه مشکی */
+}
+
+header,
+header a,
+header button,
+header input,
+header span,
+header .logo,
+header .user-actions,
+header h1,
+header h2,
+header h3,
+header h4 {
+    color: #fff !important;        /* نوشته‌ها سفید */
+}
+
+
+
+
+
+    </style>
+    
+
+    
+
+    <div class="filters">
+        <select id="colorFilter" onchange="filterProducts()">
+            <option value="">همه رنگ‌ها</option>
+            <option value="صورتی">صورتی</option>
+            <option value="آبی">آبی</option>
+            <option value="کرم">کرم</option>
+            <option value="طوسی">طوسی</option>
+        </select>
+
+        <select id="priceFilter" onchange="filterProducts()">
+            <option value="">همه قیمت‌ها</option>
+            <option value="0-200000">زیر ۲۰۰ هزار تومان</option>
+            <option value="200000-400000">۲۰۰ تا ۴۰۰ هزار تومان</option>
+            <option value="400000-1000000">بالای ۴۰۰ هزار تومان</option>
+        </select>
+    </div>
+
+    <section class="products-grid" id="productsContainer"></section>
+    <div style="clear:both;"></div>
+</main>
+<div class="order-buttons">
+    <!-- دکمه واتساپ -->
+    <a href="https://wa.me/989175473269" target="_blank" class="whatsapp-button">
+        <button class="btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> سفارش با واتساپ
+        </button>
+    </a>
+
+    <!-- دکمه تلگرام (آبی تم) -->
+    <a href="https://web.telegram.org/k/" target="_blank" class="telegram-button">
+        <button class="btn telegram-btn">
+            <i class="fab fa-telegram-plane"></i> سفارش با تلگرام
+        </button>
+    </a>
+
+    <!-- بقیه دکمه‌ها -->
+    <button class="btn quick-order-btn">سفارش سریع</button>
+    <button class="btn size-guide-btn">درخواست راهنمایی سایز</button>
+    <!-- دکمه درگاه پرداخت -->
+<a href="https://sandbox.zarinpal.com/pg/StartPay/00000000-0000-0000-0000-000000000000" target="_blank" class="payment-button">
+    <button class="btn payment-btn">
+        <i class="fas fa-credit-card"></i> پرداخت آنلاین
+    </button>
+</a>
+</div>
+
+<!-- فونت‌آوسوم (اگر قبلاً لود نشده) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+.order-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: #fff;
+}
+
+.telegram-btn {
+    background: #0088cc;
+    color: #fff;
+}
+
+.quick-order-btn {
+    background: #ff9800;
+    color: #fff;
+}
+
+.size-guide-btn {
+    background: #9c27b0;
+    color: #fff;
+}
+</style>
+
+<!-- سبد خرید -->
+<aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h2>سبد خرید شما</h2>
+        <button onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+        <div class="total">
+            <span>جمع کل:</span>
+            <span id="totalPrice">۰ تومان</span>
+        </div>
+        <button class="checkout" onclick="checkout()">نهایی کردن سفارش</button>
+    </div>
+</aside>
+
+
+<!-- مودال ورود / ثبت‌نام -->
+<div class="modal" id="authModal">
+    <div class="modal-content">
+        <button onclick="toggleAuth()" style="position:absolute;top:1rem;left:1rem;background:transparent;font-size:1.5rem;">✕</button>
+        <h3 id="authTitle">ورود به حساب</h3>
+        <form onsubmit="submitAuth(event)">
+            <input type="tel" id="phone" placeholder="شماره موبایل" required>
+            <input type="password" id="password" placeholder="رمز عبور" required minlength="4">
+            <input type="text" id="name" placeholder="نام و نام‌خانوادگی" style="display:none;">
+            <button type="submit">ورود</button>
+        </form>
+        <div class="switch">
+            <span id="switchText">حساب ندارید؟</span>
+            <span onclick="toggleAuthMode()">ثبت‌نام کنید</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      const grid = document.getElementById('productsGrid');
+      if (!grid) return;
+    
+      grid.innerHTML = '';
+      if (!products.length) {
+        grid.innerHTML = '<p style="text-align:center;width:100%;">هیچ محصولی از پنل اضافه نشده است.</p>';
+        return;
+      }
+    
+      products.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div style="
+            width:120px;
+            height:120px;
+            margin:0 auto 12px;
+            border-radius:50%;
+            overflow:hidden;
+            border:3px solid #fff;
+            box-shadow:0 2px 6px rgba(0,0,0,.12);
+          ">
+            <img src="${p.image}" alt="${p.name}"
+                 style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <h3>${p.name}</h3>
+          <p>${p.price.toLocaleString('fa-IR')} تومان</p>
+          <p style="font-size:0.8rem;color:#555;margin:4px 0;">${p.description || ''}</p>
+          <button onclick="addToCart(${p.id}, '${p.name}', ${p.price})">
+            افزودن به سبد
+          </button>
+        `;
+        grid.appendChild(card);
+      });
+    })();
+    </script>
+
+
+
+
+
+
+<script>
+    /* ---------- داده‌ی محصولات ---------- */
+    const products = [
+      {
+        id: 1,
+        name: "تی‌شرت برند مشکی",
+        price: 189000,
+        colors: ["مشکی", "آبی", "سفید", "قهوه‌ای"],
+        sizes: ["S", "M", "L", "XL"],
+        img: "./tshirt-black.png"
+      },
+      {
+        id: 2,
+        name: "تی‌شرت برند آبی",
+        price: 189000,
+        colors: ["مشکی", "آبی", "سفید", "قهوه‌ای"],
+        sizes: ["S", "M", "L", "XL"],
+        img: "images/tshirt-blue.png"
+      },
+      {
+        id: 3,
+        name: "تی‌شرت برند سفید",
+        price: 500000,
+        colors: ["مشکی", "آبی", "سفید", "قهوه‌ای"],
+        sizes: ["S", "M", "L", "XL"],
+        img: "images/tshirt-white.png"
+      },
+      {
+        id: 4,
+        name: "تی‌شرت برند قهوه‌ای",
+        price: 189000,
+        colors: ["مشکی", "آبی", "سفید", "قهوه‌ای"],
+        sizes: ["S", "M", "L", "XL"],
+        img: "images/tshirt-brown.png"
+      }
+    ];
+    
+    /* ---------- گرفتن ID از URL ---------- */
+    function getProductIdFromUrl() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return parseInt(urlParams.get('id'), 10);
+    }
+    
+    /* ---------- بارگذاری جزئیات ---------- */
+    function loadProductDetails() {
+      const productId = getProductIdFromUrl();
+      const product   = products.find(p => p.id === productId);
+
+  if (product) {
+    // نمایش جزئیات محصول
+    document.getElementById('product-name').textContent = product.name;
+    document.getElementById('product-price').textContent = `قیمت: ${product.price.toLocaleString()} تومان`;
+    document.getElementById('product-img').src = product.img;
+
+    // نمایش رنگ‌ها و سایزها
+    const colorSelect = document.getElementById('color');
+    colorSelect.innerHTML = '<option value="">انتخاب رنگ</option>';
+    product.colors.forEach(color => {
+      const option = document.createElement('option');
+      option.value = color;
+      option.textContent = color;
+      colorSelect.appendChild(option);
+    });
+
+    const sizeSelect = document.getElementById('size');
+    sizeSelect.innerHTML = '<option value="">انتخاب سایز</option>';
+    product.sizes.forEach(size => {
+      const option = document.createElement('option');
+      option.value = size;
+      option.textContent = size;
+      sizeSelect.appendChild(option);
+    });
+  } else {
+    // اگر محصول پیدا نشد
+    alert("خوش امدید!");
+  }
+}
+
+// بارگذاری جزئیات محصول هنگام بارگذاری صفحه
+window.onload = loadProductDetails;
+
+let cart = JSON.parse(localStorage.getItem('artaCart')) || [];
+let isLogin = true;
+
+/*==============================
+  RENDER PRODUCTS
+==============================*/
+// ✅ محصولات دستی (hard-coded)
+const hardCodedProducts = [
+    { id: 1, name: 'تی‌شرت مشکی', price: 189000, image: './tshirt-black.png' },
+    { id: 2, name: 'تی‌شرت آبی',  price: 189000, image: 'images/tshirt-blue.png' },
+    { id: 3, name: 'تی‌شرت سفید', price: 500000, image: 'images/tshirt-white.png' },
+    { id: 4, name: 'تی‌شرت قهوه‌ای', price: 189000, image: 'images/tshirt-brown.png' }
+];
+
+// ✅ تابع اصلی نمایش محصولات (ترکیبی)
+function renderProducts() {
+    const productsFromPanel = JSON.parse(localStorage.getItem('products')) || [];
+    const allProducts = [...hardCodedProducts, ...productsFromPanel];
+
+    const container = document.getElementById('productsContainer');
+    if (!container) return;
+
+    container.innerHTML = '';
+    if (!allProducts.length) {
+        container.innerHTML = '<p style="text-align:center;width:100%;">هیچ محصولی موجود نیست.</p>';
+        return;
+    }
+
+    allProducts.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+            <img src="${p.image}" alt="${p.name}" style="width:100%;height:150px;object-fit:cover;">
+            <div class="card-body">
+                <h3>${p.name}</h3>
+                <div class="price">${p.price.toLocaleString('fa-IR')} تومان</div>
+                <button onclick="addToCart(${p.id}, '${p.name}', ${p.price})">افزودن به سبد</button>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// ✅ بازخوانی خودکار هر ۲ ثانیه
+let lastProductsHash = '';
+setInterval(() => {
+    const productsFromPanel = JSON.parse(localStorage.getItem('products')) || [];
+    const newHash = JSON.stringify(productsFromPanel);
+    if (newHash !== lastProductsHash) {
+        lastProductsHash = newHash;
+        renderProducts();
+    }
+}, 2000);
+
+// ✅ اجرای اولیه
+renderProducts();
+
+/*==============================
+  FILTER
+==============================*/
+function filterProducts() {
+    const s = document.getElementById('searchInput').value.trim();
+    const t = document.getElementById('typeFilter').value;
+    const c = document.getElementById('colorFilter').value;
+    const p = document.getElementById('priceFilter').value;
+
+    let filtered = products.filter(pr => {
+        if (s && !pr.name.includes(s)) return false;
+        if (t && pr.type !== t) return false;
+        if (c && pr.color !== c) return false;
+        if (p) {
+            const [min, max] = p.split('-').map(Number);
+            if (pr.price < min || pr.price > max) return false;
+        }
+        return true;
+    });
+    renderProducts(filtered);
+}
+
+/*==============================
+  CART
+==============================*/
+function toggleCart() {
+    document.getElementById('cartSidebar').classList.toggle('active');
+    renderCart();
+}
+function addToCart(id) {
+    const item = products.find(p => p.id === id);
+    const exist = cart.find(c => c.id === id);
+    if (exist) {
+        exist.qty += 1;
+    } else {
+        cart.push({...item, qty: 1});
+    }
+    saveCart();
+    renderCart();
+    updateCount();
+}
+function renderCart() {
+    const container = document.getElementById('cartItems');
+    container.innerHTML = '';
+    if (cart.length === 0) {
+        container.innerHTML = '<p style="text-align:center;color:#777;">سبد خالی است.</p>';
+        updateTotal();
+        return;
+    }
+    cart.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+
+        /* ساخت تگ img به‌صورت مستقل برای لود صحیح تصویر */
+        const img = document.createElement('img');
+        img.src = item.image; // ← کلید صحیح
+        img.alt = item.name;
+
+        div.innerHTML = `
+            <div class="cart-item-info">
+                <h4>${item.name}</h4>
+                <div class="price">${(item.price * item.qty).toLocaleString('fa-IR')} تومان</div>
+                <div class="qty-controls">
+                    <button onclick="changeQty(${item.id}, -1)">−</button>
+                    <span>${item.qty}</span>
+                    <button onclick="changeQty(${item.id}, 1)">+</button>
+                </div>
+            </div>
+            <button onclick="removeItem(${item.id})" style="background:transparent;color:#e91e63;font-size:1.4rem;">🗑</button>
+        `;
+        div.insertBefore(img, div.firstChild); // قرار دادن تصویر در ابتدا
+        container.appendChild(div);
+    });
+    updateTotal();
+}
+function changeQty(id, delta) {
+    const item = cart.find(c => c.id === id);
+    if (!item) return;
+    item.qty += delta;
+    if (item.qty <= 0) removeItem(id);
+    saveCart();
+    renderCart();
+    updateCount();
+}
+function removeItem(id) {
+    cart = cart.filter(c => c.id !== id);
+    saveCart();
+    renderCart();
+    updateCount();
+}
+function updateCount() {
+    const count = cart.reduce((a, b) => a + b.qty, 0);
+    document.getElementById('cartCount').textContent = count;
+}
+function updateTotal() {
+    const total = cart.reduce((a, b) => a + (b.price * b.qty), 0);
+    document.getElementById('totalPrice').textContent = total.toLocaleString('fa-IR') + ' تومان';
+}
+function saveCart() {
+    localStorage.setItem('artaCart', JSON.stringify(cart));
+}
+function checkout() {
+    if (cart.length === 0) {
+        alert('سبد خرید شما خالی است!');
+        return; // جلوگیری از ادامه کد در صورت خالی بودن سبد خرید
+    }
+
+    // محاسبه مبلغ کل سبد خرید
+    const total = cart.reduce((a, b) => a + (b.price * b.qty), 0);
+
+    // هدایت به صفحه checkout.html و ارسال مبلغ به آن صفحه
+    window.location.href = `./cart.html?total=${encodeURIComponent(total)}`;
+}
+
+
+/*==============================
+  AUTH
+==============================*/
+/* ================== تنظیمات پایه ================== */
+const AUTH_KEY_PREFIX = 'user_';          // پیش‌وند کلید کاربران
+const TOKEN_KEY     = 'artaUserToken';    // کلید توکن موقت
+const USER_DATA_KEY = 'artaUser';         // کلید اطلاعات نمایشی
+
+(function () {
+    let isLogin = true; // دیگر خطای تعریف مجدد نمی‌دهد
+    // بقیه کدهایتان اینجا بیاید...
+})();// وضعیت پیش‌فرض: ورود
+
+/* ================== توکن & هش ساده ================== */
+const simpleHash = str => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash |= 0;
+    }
+    return hash.toString(16);
+};
+const generateToken = () =>
+    Array.from(crypto.getRandomValues(new Uint8Array(16)))
+         .map(b => b.toString(16).padStart(2, '0'))
+         .join('');
+
+/* ================== مدیریت مودال ================== */
+const toggleAuth = () =>
+    document.getElementById('authModal')?.classList.toggle('active');
+
+const toggleAuthMode = () => {
+    isLogin = !isLogin;
+    const title = document.getElementById('authTitle');
+    const nameInput = document.getElementById('name');
+    const submitBtn = document.querySelector('#authModal form button');
+    const switchText = document.getElementById('switchText');
+
+    if (title) title.textContent = isLogin ? 'ورود به حساب' : 'ثبت‌نام';
+    if (nameInput) nameInput.style.display = isLogin ? 'none' : 'block';
+    if (submitBtn) submitBtn.textContent = isLogin ? 'ورود' : 'ثبت‌نام';
+    if (switchText) {
+        switchText.innerHTML = isLogin
+            ? 'حساب ندارید؟ <a href="#" id="switchLink">ثبت‌نام کنید</a>'
+            : 'حساب دارید؟ <a href="#" id="switchLink">وارد شوید</a>';
+        document.getElementById('switchLink')?.addEventListener('click', e => {
+            e.preventDefault();
+            toggleAuthMode();
+        });
+    }
+};
+
+/* ================== ارسال فرم ================== */
+const submitAuth = e => {
+    e.preventDefault();
+    const phone = document.getElementById('phone')?.value.trim();
+    const password = document.getElementById('password')?.value;
+    const name = document.getElementById('name')?.value.trim();
+    const errorBox = document.getElementById('authError');
+
+    // اعتبارسنجی
+    const phonePattern = /^09[0-9]{9}$/;
+    if (!phonePattern.test(phone)) {
+        if (errorBox) { errorBox.textContent = 'شماره موبایل معتبر وارد کنید (09...)'; errorBox.style.display = 'block'; }
+        return;
+    }
+    if (password.length < 8) {
+        if (errorBox) { errorBox.textContent = 'رمز عبور حداقل ۸ کاراکتر باشد'; errorBox.style.display = 'block'; }
+        return;
+    }
+    if (!isLogin && name.length < 3) {
+        if (errorBox) { errorBox.textContent = 'نام کامل حداقل ۳ کاراکتر باشد'; errorBox.style.display = 'block'; }
+        return;
+    }
+
+    const userKey = AUTH_KEY_PREFIX + phone;
+    const hashedPass = simpleHash(password);
+
+    if (isLogin) {
+        /* ====== ورود ====== */
+        const existing = JSON.parse(localStorage.getItem(userKey));
+        if (!existing) {
+            if (errorBox) { errorBox.textContent = 'حسابی با این شماره یافت نشد!'; errorBox.style.display = 'block'; }
+            return;
+        }
+        if (existing.hashedPass !== hashedPass) {
+            if (errorBox) { errorBox.textContent = 'رمز عبور اشتباه است'; errorBox.style.display = 'block'; }
+            return;
+        }
+        // صدور توکن موقت
+        const token = generateToken();
+        sessionStorage.setItem(TOKEN_KEY, token);
+        sessionStorage.setItem(USER_DATA_KEY, JSON.stringify({phone, name: existing.name}));
+    } else {
+        /* ====== ثبت‌نام ====== */
+        if (localStorage.getItem(userKey)) {
+            if (errorBox) { errorBox.textContent = 'این شماره قبلاً ثبت‌نام کرده!'; errorBox.style.display = 'block'; }
+            return;
+        }
+        const userData = {name, phone, hashedPass};
+        localStorage.setItem(userKey, JSON.stringify(userData));
+        // لاگین خودکار پس از ثبت‌نام
+        const token = generateToken();
+        sessionStorage.setItem(TOKEN_KEY, token);
+        sessionStorage.setItem(USER_DATA_KEY, JSON.stringify({phone, name}));
+    }
+
+    toggleAuth();
+    updateUserLabel();
+    alert(isLogin ? 'با موفقیت وارد شدید!' : 'ثبت‌نام و ورود شما انجام شد!');
+};
+
+/* ===== نمایش نام کاربر ===== */
+const updateUserLabel = () => {
+    const user = JSON.parse(sessionStorage.getItem(USER_DATA_KEY));
+    const label = document.getElementById('userLabel');
+    if (label) label.textContent = user ? `سلام، ${user.name}` : 'ورود / ثبت‌نام';
+};
+
+/* ===== بررسی ورود خودکار (در لود صفحه) ===== */
+(() => updateUserLabel())();
+
+/* ===== شناسایی رویدادها ===== */
+document.getElementById('authForm')?.addEventListener('submit', submitAuth);
+document.getElementById('switchLink')?.addEventListener('click', e => {
+    e.preventDefault();
+    toggleAuthMode();
+});
+
+
+updateUserLabel();
+
+/*==============================
+  INIT
+==============================*/
+updateCount();
+
+/* ========== انتقال به صفحه نهایی‌سازی ========== */
+function goToCheckout() {
+  if (!Array.isArray(cart) || cart.length === 0) {
+    alert('سبد خرید شما خالی است!');
+    return;
+  }
+  const total = cart.reduce((sum, item) => sum + (item.price * (item.qty || 1)), 0);
+  window.location.href = 'checkout.html?total=' + encodeURIComponent(total);
+}
+
+/* ========== اتصال دکمه (در صورت نیاز) ========== */
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('finalCheckoutBtn');
+  if (btn) btn.addEventListener('click', goToCheckout);
+});
+</script>
+
+<!-- نمایش محصولات ذخیره‌شده از پنل مدیریت -->
+<script>
+(function () {
+  const products = JSON.parse(localStorage.getItem('products')) || [];
+  const grid = document.getElementById('productsGrid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  if (!products.length) {
+    grid.innerHTML =
+      '<p style="text-align:center;width:100%;">هیچ محصولی از پنل اضافه نشده است.</p>';
+    return;
+  }
+
+  products.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+
+    /* ۱) عکس دایره‌ای با border و سایه */
+    card.innerHTML = `
+      <div style="
+        width:120px;
+        height:120px;
+        margin:0 auto 12px;
+        border-radius:50%;
+        overflow:hidden;
+        border:3px solid #fff;
+        box-shadow:0 2px 6px rgba(0,0,0,.12);
+      ">
+        <img src="${p.image}" alt="${p.name}"
+             style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+
+          <h3>${p.name}</h3>
+      <p>${p.price.toLocaleString('fa-IR')} تومان</p>
+      <!-- خط جدید: نمایش توضیحات -->
+      <p style="font-size:0.8rem;color:#555;margin:4px 0;">${p.description || ''}</p>
+      <button onclick="addToCart(${p.id}, '${p.name}', ${p.price})">
+        افزودن به سبد
+      </button>
+    `;
+
+    grid.appendChild(card);
+  });
+})();
+   
+    </script>
+
+<script>
+    /* ========== addToCart یکپارچه و بدون‌رفرش ========== */
+    window.addToCart = function (productId) {
+      // ۱) خواندن محصولات دستی و پنل
+      const hardCodedProducts = [
+        {id:1 ,name:'تی‌شرت مشکی',price:189000,image:'./tshirt-black.png'},
+        {id:2 ,name:'تی‌شرت آبی', price:189000,image:'images/tshirt-blue.png'},
+        {id:3 ,name:'تی‌شرت سفید',price:500000,image:'images/tshirt-white.png'},
+        {id:4 ,name:'تی‌شرت قهوه‌ای',price:189000,image:'images/tshirt-brown.png'}
+      ];
+      const panelProducts = JSON.parse(localStorage.getItem('products')) || [];
+      const allProducts = [...hardCodedProducts, ...panelProducts];
+    
+      // ۲) یافتن محصول
+      const product = allProducts.find(p => p.id === productId);
+      if (!product) { alert('محصول یافت نشد!'); return; }
+    
+      // ۳) خواندن سبد از localStorage
+      let cart = JSON.parse(localStorage.getItem('artaCart')) || [];
+      const exist = cart.find(item => item.id === productId);
+      if (exist) {
+        exist.qty += 1;
+      } else {
+        cart.push({
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          image: product.image,
+          qty: 1
+        });
+      }
+    
+      // ۴) ذخیره سبد
+      localStorage.setItem('artaCart', JSON.stringify(cart));
+
+// به‌روزرسانی فوری (بدون رفرش)
+renderCart();
+updateCount();
+updateTotal();
+
+// اختیاری: باز کردن سبد
+document.getElementById('cartSidebar')?.classList.add('active');
+      alert('به سبد افزوده شد ✔');
+      alert('صفحه رو یک بار رفرش کنید تا محصول به سبد خرید اضافه بشه');
+    };
+    </script>
+  
+    </body>
+    
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
+<!-- ========== فوتر حرفه‌ای ========== -->
+<footer style="background:#1a1a1a;color:#f3e5f5;padding:3rem 2rem 2rem;margin-top:4rem;font-size:.95rem;line-height:2;">
+    <div style="max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;">
+
+        <!-- ستون ۱ -->
+        <div>
+            <h4 style="color:#ce93d8;margin-bottom:.8rem;">اعتبار ما، اعتماد شما</h4>
+            <p>لباس سرای ارتا با بیش از یک دهه سابقه درخشان در عرضه بهترین لباس‌های ایرانی و خارجی، افتخار دارد در خدمت مشتریان گرامی باشد.</p>
+        </div>
+
+        <!-- ستون ۲ -->
+        <div>
+            <h4 style="color:#ce93d8;margin-bottom:.8rem;">تماس با ما</h4>
+            <p>شماره تلفن: <a href="tel:09175473269" style="color:#fff;font-weight:bold;">09175473269.09045463653</a></p>
+            <p>آدرس: اصفهان، خیابان امیرکبیر، بازار بزرگ، طبقه همکف، پلاک ۲۵</p>
+        </div>
+
+        <!-- ستون ۳ -->
+        <div>
+            <h4 style="color:#ce93d8;margin-bottom:.8rem;">ارسال و خدمات</h4>
+            <p>✓ ارسال درون‌شهری اصفهان کاملاً <strong>رایگان</strong></p>
+            <p>✓ امکان ارسال به سراسر کشور با پست پیشتاز و سفارشی</p>
+        </div>
+
+        <!-- ستون ۴ -->
+        <div>
+            <h4 style="color:#ce93d8;margin-bottom:.8rem;">سازنده سایت</h4>
+            <p>طراحی و توسعه: <strong>تیم برنامه‌نویسی ارتا</strong></p>
+            <p>پشتیبانی فنی: <a href="https://wa.me/989175473269", style="color:#fff;">ارتباط از طریق واتس‌اپ</a></p>
+        </div>
+
+    </div>
+
+    <!-- خط جداکننده -->
+    <hr style="border:none;height:1px;background:#4a0072;margin:2rem 0;">
+
+    <!-- کپی‌رایت -->
+    <div style="text-align:center;font-size:.85rem;color:#9c27b0;">
+        © ۱۴۰۴ لباس سرای ارتا | تمامی حقوق محفوظ است.
+    </div>
+</footer>
+<!-- ========== پایان فوتر ========== -->
+<!-- ========== override addToCart – همیشه اطلاعات کامل بخواند ========== -->
+
+
+
+
+
+
+
+
+

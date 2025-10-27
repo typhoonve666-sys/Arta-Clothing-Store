@@ -1,0 +1,855 @@
+/* دکمه‌ها */
+.btn {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    margin: 10px;
+}
+/* دکمه سبز (واتساپ) */
+.whatsapp-btn {
+    background-color: #25d366; /* سبز واتساپ */
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* دکمه مشکی (سفارش سریع) */
+.quick-order-btn {
+    background-color: #333; /* مشکی */
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-order-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #444;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.quick-order-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.quick-order-btn:hover {
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* دکمه مشکی (درخواست راهنمای سایز) */
+.size-guide-btn {
+    background-color: #333; /* مشکی */
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.size-guide-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #444;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.size-guide-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.size-guide-btn:hover {
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* افکت‌های هاور و انیمیشن */
+.btn:hover {
+    transform: translateY(-5px); /* حرکت دکمه به بالا */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* افکت سایه */
+}
+
+/* افکت‌های انیمیشنی برای دکمه‌ها */
+.btn:active {
+    transform: translateY(2px); /* حرکت دکمه به پایین */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* سایه ضعیف‌تر */
+}
+
+/* تغییر رنگ پس زمینه و انیمیشن دکمه‌ها */
+.btn:focus {
+    outline: none;
+    background-color: #ff4081; /* رنگ پس‌زمینه به صورتی تغییر می‌کند */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .product-detail-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .product-image {
+    width: 40%;
+  }
+  
+  .product-info {
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-info h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .product-price {
+    font-size: 20px;
+    color: #ff5722;
+  }
+  
+  .color-selection, .size-selection {
+    margin-top: 15px;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #e64a19;
+  }
+  
+  .tab-btn {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .tab-btn:hover {
+    background-color: #ddd;
+  }
+  
+  .tab-content {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .product-description {
+    margin-top: 30px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background-image: url('bak.png'); /* مسیر عکس جدید */
+    background-size: cover; /* برای اینکه عکس به صورت کامل روی صفحه بیافته */
+    background-position: center; /* برای وسط چین شدن عکس */
+    background-attachment: fixed; /* برای ثابت نگه داشتن پس‌زمینه در هنگام اسکرول */
+}
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product-item {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-detail {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-detail img {
+    width: 100%;
+    height: auto;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .view-product {
+    background-color: #000; /* رنگ پس‌زمینه مشکی */
+    color: white; /* رنگ متن سفید */
+    padding: 12px 24px; /* فاصله داخلی (padding) برای اندازه متوسط */
+    font-size: 16px; /* اندازه فونت متوسط */
+    border-radius: 5px; /* گوشه‌های گرد برای دکمه */
+    border: none; /* حذف حاشیه دکمه */
+    cursor: pointer; /* تغییر نشانگر ماوس به pointer */
+    transition: background-color 0.3s ease; /* افکت تغییر رنگ پس‌زمینه در زمان hover */
+  }
+  
+  .view-product:hover {
+    background-color: #000000; /* رنگ پس‌زمینه دکمه هنگام هاور */
+  }
+
+  .product-buttons {
+    display: flex;
+    gap: 15px; /* فاصله بین دکمه‌ها */
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 12px 24px; /* اندازه متوسط دکمه */
+    font-size: 16px; /* اندازه فونت دکمه */
+    cursor: pointer;
+    border-radius: 5px; /* گوشه‌های گرد */
+    border: none; /* حذف حاشیه */
+    transition: background-color 0.3s ease; /* افکت تغییر رنگ پس‌زمینه هنگام هاور */
+  }
+  
+  .add-to-cart {
+    background-color: #28a745; /* رنگ دکمه افزودن به سبد خرید */
+    color: white; /* رنگ متن سفید */
+  }
+  
+  .view-product {
+    background-color: #000; /* رنگ پس‌زمینه مشکی */
+    color: white; /* رنگ متن سفید */
+  }
+  
+  button:hover {
+    opacity: 0.8; /* افکت هاور برای کاهش شفافیت */
+  }
+
+
+
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* اختصاصی کردن استایل‌ها فقط برای صفحه محصول */
+.product-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* بخش سمت چپ (قیمت و دکمه‌ها) */
+.product-left {
+  background-color: #f8f8f8;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-left h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.product-left .price {
+  font-size: 24px;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-left .add-to-cart {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-left .add-to-cart:hover {
+  background-color: #e74c3c;
+}
+
+/* دکمه‌های واتساپ و تلگرام */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-buttons a {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+/* رنگ‌های مخصوص هر دکمه */
+.whatsapp-button {
+  background-color: #25D366; /* سبز برای واتساپ */
+}
+
+.telegram-button {
+  background-color: #0088cc; /* آبی برای تلگرام */
+}
+
+/* حالت هاور برای دکمه‌ها */
+.social-buttons a:hover {
+  opacity: 0.9;
+}
+
+/* Right section (تصویر محصول و جزئیات) */
+.product-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-details {
+  text-align: left;
+  font-size: 16px;
+  color: #555;
+}
+
+.product-details p {
+  margin-bottom: 15px;
+}
+
+.product-details strong {
+  color: #333;
+  font-weight: bold;
+}
+
+/* بهبود ریسپانسیو بودن برای موبایل */
+@media screen and (max-width: 768px) {
+  .product-container {
+    grid-template-columns: 1fr; /* دو بخش به صورت عمودی در می‌آید */
+    gap: 20px;
+  }
+
+  .product-left, .product-right {
+    text-align: center;
+  }
+
+  .product-left h1 {
+    font-size: 24px;
+  }
+
+  .product-left .price {
+    font-size: 20px;
+  }
+
+  .product-left .add-to-cart {
+    font-size: 16px;
+  }
+
+  .social-buttons a {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* تنظیمات کلی */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* فیلد تعداد و دکمه‌ها */
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .quantity-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quantity-btn:hover {
+    background-color: #e74c3c;
+  }
+  
+  .quantity-input {
+    width: 60px;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  
+  /* دکمه افزودن به سبد خرید */
+  .add-to-cart {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-to-cart:hover {
+    background-color: #e74c3c;
+  }
+  
+  /* استایل دکمه‌های اجتماعی */
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-buttons a {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  /* رنگ‌های مخصوص هر دکمه */
+  .whatsapp-button {
+    background-color: #25D366; /* سبز برای واتساپ */
+  }
+  
+  .telegram-button {
+    background-color: #0088cc; /* آبی برای تلگرام */
+  }
+  
+  /* حالت هاور برای دکمه‌ها */
+  .social-buttons a:hover {
+    opacity: 0.9;
+  }
+
+  /* استایل کلی */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* بخش hero (بخش اصلی صفحه با پس‌زمینه) */
+.hero {
+  position: relative;
+  background-image: url('bak.png'); /* مسیر فایل تصویری که می‌خواهید */
+  background-size: cover; /* این تنظیم باعث می‌شود تصویر پس‌زمینه به طور کامل صفحه را پوشش دهد */
+  background-position: center; /* تصویر در مرکز صفحه قرار می‌گیرد */
+  background-attachment: fixed; /* تصویر ثابت باقی می‌ماند */
+  height: 100vh; /* این بخش به اندازه کل صفحه نمایش می‌دهد */
+  color: white; /* رنگ متن سفید */
+}
+
+/* لایه شفاف */
+.fabric-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* رنگ شفاف مشکی برای تاریک‌تر کردن تصویر */
+  z-index: 1;
+}
+
+/* استایل برای متن */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-text .brand {
+  font-weight: bold;
+}
+
+.cta {
+  display: inline-block;
+  background-color: #7b1fa2;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.cta:hover {
+  background-color: #4a0072;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+}
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: #7b1fa2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+}
+
+section {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #7b1fa2;
+}
+
+#add-product {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  background-color: #7b1fa2;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #5e1a8f;
+}
+
+#ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#ordersTable th, #ordersTable td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+#ordersTable th {
+  background-color: #7b1fa2;
+  color: white;
+}
+
+#ordersTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#ordersTable button {
+  background-color: #ce93d8;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#ordersTable button:hover {
+  background-color: #4a0072;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+}
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: #7b1fa2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+}
+
+section {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #7b1fa2;
+}
+
+/* جدول سفارشات و محصولات */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #7b1fa2;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+button {
+  background-color: #ce93d8;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4a0072;
+}
+
+/* فرم افزودن محصول */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  background-color: #7b1fa2;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #5e1a8f;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.modal{display:none;position:fixed;z-index:999;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.45)}
+.modal-content{background:#fff;margin:10% auto;padding:20px;width:320px;border-radius:8px;direction:rtl;text-align:right}
+.modal-content label,.modal-content input{width:100%;margin:6px 0}
+.close{float:left;font-size:22px;cursor:pointer}
+
+.payment-btn {
+  background: #fd5e00;
+  color: #fff;
+}
+
+
+
+  
+  

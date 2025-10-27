@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت لباس سرای ارتا</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .btn-del, .btn-edit {
+            border: none;
+            padding: 4px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            margin: 0 2px;
+        }
+        .btn-del {
+            background: #e91e63;
+            color: #fff;
+        }
+        .btn-del:hover {
+            background: #c2185b;
+        }
+        .btn-edit {
+            background: #2196F3;
+            color: #fff;
+        }
+        .btn-edit:hover {
+            background: #1976D2;
+        }
+        /* سبک مودال */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .45)
+        }
+        .modal-content {
+            background: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            width: 320px;
+            border-radius: 8px;
+            direction: rtl;
+            text-align: right
+        }
+        .modal-content label, .modal-content input {
+            width: 100%;
+            margin: 6px 0
+        }
+        .close {
+            float: left;
+            font-size: 22px;
+            cursor: pointer
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background: #f5f5f5;
+        }
+        img {
+            width: 60px;
+            border-radius: 8px;
+        }
+        /* استایل صفحه‌ی ۴۰۳ */
+        .access-denied {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'IRANSans', tahoma, sans-serif;
+            background: #f3e5f5;
+            color: #4a0072;
+        }
+        .access-denied h1 {
+            margin-bottom: 1rem;
+        }
+        .access-denied button {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: none;
+            background: #7b1fa2;
+            color: #fff;
+            cursor: pointer;
+            transition: background .3s;
+        }
+        .access-denied button:hover {
+            background: #4a0072;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- بخش اصلی پنل (در صورت لاگین بودن) -->
+    <div id="adminPanel" class="admin-dashboard">
+        <header>
+            <h1>پنل مدیریت لباس سرای ارتا</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#orders">مدیریت سفارشات</a></li>
+                    <li><a href="#products">مدیریت محصولات</a></li>
+                    <li><a href="#users">مدیریت کاربران</a></li>
+                    <li><a href="#" id="logoutBtn">خروج</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- مودال ویرایش محصول -->
+            <div id="editProductModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>ویرایش محصول</h3>
+                    <input type="hidden" id="editIndex">
+                    <label>نام محصول:<br><input id="editName"></label>
+                    <label>قیمت (تومان):<br><input id="editPrice" type="number"></label>
+                    <label>توضیحات:<br><input id="editDesc"></label>
+                    <label>تصویر (URL یا Base64):<br><input id="editImage"></label>
+                    <button onclick="saveEdit()">ذخیره تغییرات</button>
+                </div>
+            </div>
+
+            <!-- بخش مدیریت سفارشات -->
+            <section id="orders">
+                <h2>سفارش‌ها</h2>
+                <table id="ordersTable">
+                    <thead>
+                        <tr>
+                            <th>شماره</th>
+                            <th>نام مشتری</th>
+                            <th>محصولات</th>
+                            <th>مبلغ کل</th>
+                            <th>آدرس</th>
+                            <th>تلفن</th>
+                            <th>وضعیت</th>
+                            <th>عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+            <!-- بخش مدیریت محصولات -->
+            <section id="products">
+                <h2>محصولات</h2>
+                <table id="productsTable">
+                    <thead>
+                        <tr>
+                            <th>نام محصول</th>
+                            <th>قیمت</th>
+                            <th>تصویر</th>
+                            <th>عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <h3>افزودن محصول جدید</h3>
+                <form id="addProductForm">
+                    <label>نام محصول:<br><input type="text" id="productName" required></label>
+                    <label>قیمت (تومان):<br><input type="number" id="productPrice" required></label>
+                    <label>توضیحات:<br><input type="text" id="productDescription" required></label>
+                    <label>تصویر محصول:<br><input type="file" id="productImage" required></label>
+                    <button type="submit">افزودن محصول</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- صفحه‌ی دسترسی ممنوع (در صورت عدم لاگین) -->
+    <div id="accessDenied" class="access-denied" style="display:none;">
+        <h1>۴۰۳ - دسترسی ممنوع</h1>
+        <p>شما مجوز لازم برای مشاهده این بخش را ندارید.</p>
+        <button onclick="location.href='login.html'">بازگشت به صفحه ورود</button>
+    </div>
+
+    <script>
+        /* ==================== کنترل دسترسی ==================== */
+        (function () {
+            const token = sessionStorage.getItem('artaAdminToken');
+            if (!token) {
+                document.body.innerHTML = '';
+                document.body.className = 'access-denied';
+                document.body.innerHTML = `
+                    <h1>۴۰۳ - دسترسی ممنوع</h1>
+                    <p>شما مجوز لازم برای مشاهده این بخش را ندارید.</p>
+                    <button onclick="location.href='login.html'">بازگشت به صفحه ورود</button>
+                `;
+                throw new Error('Access Denied');
+            }
+        })();
+
+        /* ==================== خروج امن ==================== */
+        document.getElementById('logoutBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (confirm('آیا از خروج اطمینان دارید؟')) {
+                sessionStorage.removeItem('artaAdminToken');
+                location.href = 'login.html';
+            }
+        });
+
+        /* ==================== حذف سفارش ==================== */
+        function deleteOrder(idx) {
+            if (!confirm('آیا مطمئن هستید می‌خواهید این سفارش را حذف کنید؟')) return;
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            orders.splice(idx, 1);
+            localStorage.setItem('orders', JSON.stringify(orders));
+            loadOrders();
+        }
+
+        /* ==================== تغییر وضعیت سفارش ==================== */
+        function changeOrderStatus(idx) {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            if (orders[idx]) {
+                orders[idx].status = orders[idx].status === 'در حال پردازش' ? 'ارسال شده' : 'در حال پردازش';
+                localStorage.setItem('orders', JSON.stringify(orders));
+                loadOrders();
+            }
+        }
+
+        /* ==================== بارگذاری سفارشات ==================== */
+        function loadOrders() {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            const tbody = document.querySelector('#ordersTable tbody');
+            tbody.innerHTML = '';
+
+            if (orders.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;">هیچ سفارشی ثبت نشده است.</td></tr>';
+                return;
+            }
+
+            orders.forEach((order, idx) => {
+                const productsText = Array.isArray(order.products)
+                    ? order.products.map(p => `${p.name} (${p.quantity || 1} عدد)`).join(' ، ')
+                    : (order.products || '---');
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${idx + 1}</td>
+                    <td>${order.name || '---'}</td>
+                    <td>${productsText}</td>
+                    <td>${Number(order.totalPrice || 0).toLocaleString('fa-IR')} تومان</td>
+                    <td>${order.location || '---'}</td>
+                    <td>${order.phone || '---'}</td>
+                    <td>${order.status || 'در حال پردازش'}</td>
+                    <td>
+                        <button onclick="changeOrderStatus(${idx})">تغییر وضعیت</button>
+                        <button class="btn-del" onclick="deleteOrder(${idx})">🗑 حذف</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        /* ==================== ویرایش محصول ==================== */
+        function editProduct(idx) {
+            const products = JSON.parse(localStorage.getItem('products')) || [];
+            const p = products[idx];
+            if (!p) return;
+
+            document.getElementById('editIndex').value = idx;
+            document.getElementById('editName').value = p.name;
+            document.getElementById('editPrice').value = p.price;
+            document.getElementById('editDesc').value = p.description || '';
+            document.getElementById('editImage').value = p.image || '';
+            document.getElementById('editProductModal').style.display = 'block';
+        }
+
+        function saveEdit() {
+            const idx = document.getElementById('editIndex').value;
+            const products = JSON.parse(localStorage.getItem('products')) || [];
+            if (!products[idx]) return;
+
+            products[idx].name = document.getElementById('editName').value.trim();
+            products[idx].price = parseInt(document.getElementById('editPrice').value);
+            products[idx].description = document.getElementById('editDesc').value.trim();
+            products[idx].image = document.getElementById('editImage').value.trim();
+
+            localStorage.setItem('products', JSON.stringify(products));
+            document.getElementById('editProductModal').style.display = 'none';
+            loadProducts();
+        }
+
+        /* ==================== بستن مودال ==================== */
+        document.querySelector('#editProductModal .close').onclick = () =>
+            document.getElementById('editProductModal').style.display = 'none';
+
+        /* ==================== حذف محصول ==================== */
+        function deleteProduct(idx) {
+            if (!confirm('آیا مطمئن هستید می‌خواهید این محصول را حذف کنید؟')) return;
+            const products = JSON.parse(localStorage.getItem('products')) || [];
+            products.splice(idx, 1);
+            localStorage.setItem('products', JSON.stringify(products));
+            loadProducts();
+        }
+
+        /* ==================== بارگذاری محصولات ==================== */
+        function loadProducts() {
+            const products = JSON.parse(localStorage.getItem('products')) || [];
+            const tbody = document.querySelector('#productsTable tbody');
+            tbody.innerHTML = '';
+
+            if (products.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;">هیچ محصولی ثبت نشده است.</td></tr>';
+                return;
+            }
+
+            products.forEach((p, idx) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${p.name}</td>
+                    <td>${Number(p.price || 0).toLocaleString('fa-IR')} تومان</td>
+                    <td><img src="${p.image || 'images/no-image.png'}" alt="${p.name}"></td>
+                    <td>
+                        <button class="btn-edit" onclick="editProduct(${idx})">ویرایش</button>
+                        <button class="btn-del" onclick="deleteProduct(${idx})">حذف</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        /* ==================== افزودن محصول جدید ==================== */
+        document.getElementById('addProductForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('productName').value.trim();
+            const price = parseInt(document.getElementById('productPrice').value);
+            const desc = document.getElementById('productDescription').value.trim();
+            const fileInput = document.getElementById('productImage');
+
+            if (!name || !price || !fileInput.files[0]) {
+                alert("لطفاً همه فیلدها را پر کنید.");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (ev) {
+                const products = JSON.parse(localStorage.getItem('products')) || [];
+                products.push({
+                    id: Date.now(),
+                    name: name,
+                    price: price,
+                    description: desc,
+                    image: ev.target.result
+                });
+                localStorage.setItem('products', JSON.stringify(products));
+                alert("محصول با موفقیت افزوده شد.");
+                e.target.reset();
+                loadProducts();
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        });
+
+        /* ==================== اجرای اولیه ==================== */
+        document.addEventListener('DOMContentLoaded', () => {
+            loadOrders();
+            loadProducts();
+        });
+    </script>
+</body>
+</html>
+
+
+      
